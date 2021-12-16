@@ -61,7 +61,8 @@ for($x=0;$x<$arrlength;$x++)
 	  var $birthday = false; // any person birthday we set as false first and use it later
 
 	  function __construct( $name, $age ) {
-		  $this->name
+		  $this->name = $name;
+		  $this->age = $age;
 	  }
   }
  ?>
