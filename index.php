@@ -82,16 +82,20 @@ for($x=0;$x<$arrlength;$x++)
 		 $this->update_age();
 	  }
 
-	  public function update_age() {
-		  $this->age = ($this->birthday) ? ++$this-> : $this->age;
+	  private function update_age() {
+		  $this->age = ($this->birthday) ? ++$this->age : $this->age;
 	  }
 
   }
 
-  $joe = new Person ('joe', 35) . '<br/>';
-  $rob = new Person ('rob', 30) . '<br/>';
+  $joe = new Person ( 'joe', 35 );
+  $rob = new Person ( 'rob', 30 );
 
-  echo $joe->get_name();
+  echo $joe->get_name() . '<br/>';
+  echo $rob->get_name() . '<br/>';
+  
+  $joe->set_birthday(true);
+  echo $joe->get_age();
  ?>
 
 
