@@ -64,7 +64,34 @@ for($x=0;$x<$arrlength;$x++)
 		  $this->name = $name;
 		  $this->age = $age;
 	  }
+
+	  public function get_name(){
+		  return $this->name;
+	  }
+
+	  public function get_age(){
+		  return $this->age;
+	  }
+
+	  public function set_name( $new_name ){
+		  $this->name = $new_name;
+	  }
+
+	  public function set_birthday ( $b ){
+		 $this->age = $b;
+		 $this->update_age();
+	  }
+
+	  public function update_age() {
+		  $this->age = ($this->birthday) ? ++$this-> : $this->age;
+	  }
+
   }
+
+  $joe = new Person ('joe', 35) . '<br/>';
+  $rob = new Person ('rob', 30) . '<br/>';
+
+  echo $joe->get_name();
  ?>
 
 
